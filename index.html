@@ -1,0 +1,64 @@
+<html>
+<head>
+	<meta charset="utf-8" />
+	<link rel="stylesheet" href="style.css" type="text/css" />
+	<title>My_Paint</title>
+</head>
+<body>
+	<header>
+		<h1>My Paint</h1>
+	</header>
+	<aside>
+		<ul id="liste">
+			<div>
+				<li><a href="#" data-couleur="#000000">Noir</a></li>
+				<li><a href="#" data-couleur="#FF0000">Rouge</a></li>
+				<li><a href="#" data-couleur="#FFFF00">Jaune</a></li>
+				<li><a href="#" data-couleur="#00BFFF">Bleu</a></li>
+				<li><a href="#" data-couleur="#FFB6C1">Rose</a></li>
+			</div>
+			<div>
+				<li><a href="#" data-couleur="#008000">Vert</a></li>
+				<li><a href="#" data-couleur="#808080">Gris</a></li>
+				<li><a href="#" data-couleur="#800080">Violet</a></li>
+				<li><a href="#" data-couleur="#FFFFFF">Blanc</a></li>
+				<li><a href="#" data-couleur="#BDB76B">Marron</a></li>
+			</div>
+		</ul>
+		<label for="range"><img alt="epaisseur" src="images/progress.png"></img></label>
+		<input type="range" min="1" max="55" value="5" id="range" onchange="updateTextInput(this.value);" />
+		<input type="text" id="textInput" value="" />
+		<figure>
+			<div>
+				<img alt="reset" src="images/refresh.png" id="refresh"></img>
+				<img alt="save" src="images/download.png" id="save_work"></img>
+				<img alt="crayon" src="images/draw.png" id="only_draw"></img>
+			</div>
+			<div>
+				<img alt="ligne droite" src="images/right_line.png" id="draw_line"></img>
+				<img alt="rectangle" src="images/rectangle.png" id="rectangle"></img>
+				<img alt="cercle" src="images/circle.png" id="draw_circle"></img>
+			</div>
+			<div>
+				<img alt="remplissage" src="images/fill.png" id="fill_figure"></img>
+				<img alt="fill_canvas" src="images/fill_canvas.png" id="fill_canvas"></img>
+				<img alt="gomme" src="images/gum.png" id="gomme"></img>
+				<img alt="upload" src="images/upload.png" id="insert_img"></img>
+			</div>
+		</figure>
+	<div id="upload_img">
+		<input id="input_img" type="file" onchange="uploadFile()">
+		<img id="img_user" src="" alt="image_upload"></img>
+	</div>
+	</aside>
+	<canvas id="canvas" width="1000" height="700"></canvas>
+<!-- 	<input type="button" id="only_draw" value="Crayon" />
+	<input type="button" id="draw_line" value="Ligne droite" />
+	<input type="button" id="rectangle" value="Rectangle" />
+	<input type="button" id="fill_figure" value="Activer/Désactiver le remplissage" />
+	<input type="button" id="draw_circle" value="Cercle" />
+	<input type="button" id="fill_canvas" value="Remplir" />
+	<input type="button" id="gomme" value="Gomme" /> -->
+</body>
+<script type="text/javascript" src="paint.js"></script>
+</html>
